@@ -25,7 +25,7 @@ class WordsFinder:
         for fname, words in self.get_all_words().items():
             if find_word.lower() in words:
                 result = dict()
-                result[fname] = words.index(find_word.lower())
+                result[fname] = words.index(find_word.lower()) + 1
                 return result
             else:
                 return None
