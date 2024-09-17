@@ -8,9 +8,7 @@ def custom_write( file_name, strings):
             index += 1
             current_position = file.tell()
             print(i_string, file=file)
-            #file.write('\n' + i_string)
             strings_positions[(index, current_position)] = i_string
-        file.close()
         return strings_positions
 
 
