@@ -3,10 +3,12 @@ def add_everything_up(aa, bb):
     """сложение числа (int, float) и строки(str)"""
     res = 0
     try:
-        res = round(aa + bb, 3)
+        res = aa + bb
     except TypeError:
         res = str(aa) + str(bb)
     finally:
+        if isinstance( res, float):
+            res = round( res, 3)
         return res
 
 
